@@ -17,16 +17,6 @@ export const MoviesList = ({ movies }) => {
   );
 };
 
-// MoviesList.propTypes = {
-//   movies: PropTypes.arrayOf({
-//     movie: PropTypes.shape({
-//       id: PropTypes.number.isRequired,
-//       title: PropTypes.string.isRequired,
-//       poster_path: PropTypes.string.isRequired,
-//     }).isRequired,
-//   }).isRequired,
-// };
-
 MoviesList.propTypes = {
   movies: PropTypes.arrayOf(
     PropTypes.shape({

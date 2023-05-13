@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const ListItem = styled.li`
+  width: 350px;
   background-color: #ffffff;
   transition: box-shadow 250ms ease-in-out;
   transition: transform 250ms ease-in-out;

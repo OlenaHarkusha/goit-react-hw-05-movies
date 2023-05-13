@@ -34,6 +34,11 @@ export const MovieContainer = styled.div`
   grid-template-rows: auto;
   align-content: stretch;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const MovieInfoWrapper = styled.div`
