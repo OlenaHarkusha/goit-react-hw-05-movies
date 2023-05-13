@@ -1,8 +1,10 @@
 import { MovieCard } from 'components/MovieCard';
+import { List } from './MoviesList.styled';
+import PropTypes from 'prop-types';
 
 export const MoviesList = ({ movies }) => {
   return (
-    <ul>
+    <List>
       {movies.map(movie => (
         <MovieCard
           key={movie.id}
@@ -11,6 +13,26 @@ export const MoviesList = ({ movies }) => {
           id={movie.id}
         />
       ))}
-    </ul>
+    </List>
   );
+};
+
+// MoviesList.propTypes = {
+//   movies: PropTypes.arrayOf({
+//     movie: PropTypes.shape({
+//       id: PropTypes.number.isRequired,
+//       title: PropTypes.string.isRequired,
+//       poster_path: PropTypes.string.isRequired,
+//     }).isRequired,
+//   }).isRequired,
+// };
+
+MoviesList.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      poster_path: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
 };
